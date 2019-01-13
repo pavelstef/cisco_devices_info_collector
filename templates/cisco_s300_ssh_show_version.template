@@ -1,0 +1,5 @@
+Value VERSION (\S+)
+
+Start
+  ^\S*\s*[V|v]ersion\S*\s+${VERSION}\s* -> Record End
+  

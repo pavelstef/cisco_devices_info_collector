@@ -1,0 +1,7 @@
+Value Required NEIGHBOR (\S+)
+Value LOCAL_INTERFACE (\w+\d+)
+Value PLATFORM (\S+)
+Value NEIGHBOR_INTERFACE (\S+)
+
+Start
+  ^${NEIGHBOR}\s+${LOCAL_INTERFACE}\s+\d+\s+\d+\s+\S+\s+\S+\s+\S+\s+${PLATFORM}\s+${NEIGHBOR_INTERFACE} -> Record
