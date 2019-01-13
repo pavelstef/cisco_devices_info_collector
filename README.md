@@ -12,7 +12,6 @@ The script supports the following types of equipment:
 
 • Cisco SMB (SG350, SG500). (50/50 - but sometimes it works)
 #
-#
 The script saves the following useful information to the “inventory.xlsx” file:
 #
 • Ip address
@@ -29,16 +28,13 @@ The script saves the following useful information to the “inventory.xlsx” fi
 
 • uptime (* not for Cisco SMB)
 #
-#
 In addition, the script saves the full output of commands to a separate text file "raw_parsed_output.txt"
-#
 #
 At runtime, the script uses the following commands:
 #
 • Cisco IOS and IOS-XE: 'show cdp neighbors', 'show inventory', 'show version'
 
 • Cisco WLC:: 'show cdp neighbors detail', 'show inventory', 'show sysinfo'
-#
 #
 # Requirements
 The script requires the following Python modules:
@@ -68,7 +64,6 @@ The script requires the following Python modules:
 •	from tabulate import tabulate    # To usable table output
 
 •	import xlsxwriter   # To save the files in Excel format
-#
 #
 Make sure that you have all the necessary modules installed before you run the script.
 To get information about how to install modules in Python see
