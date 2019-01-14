@@ -192,14 +192,16 @@ def check_ip_availability(list_ip_for_checking, verbose_flag, limit=3):
             print('\n', 'Checking the availability of IP {}'.format(item))
 
         # Checking the OS version and use the ping command format depending on the OS version
-        if platform.system() is 'Linux':
+        if platform.system() == 'Linux':
             reply = subprocess.run(['ping', '-c', '3', '-n', item], stdout=subprocess.PIPE,
                                    stderr=subprocess.PIPE)
-        elif platform.system() is 'Windows':
+        elif platform.system() == 'Windows':
             reply = subprocess.run(['ping', '-n', '3', item], stdout=subprocess.PIPE,
                                    stderr=subprocess.PIPE)
         else:
-            raise ValueError('\n', 'Something went wrong! I don\'t have this operating system for test my script')
+            raise ValueError('\n', 'Something went wrong!',
+				'Your platform system is "{}"'.format(platform.system()),
+				 'I don\'t have this operating system for test my script')
             return(False, list_ip_for_checking)
 
 
